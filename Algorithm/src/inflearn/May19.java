@@ -12,7 +12,7 @@ public class May19 {
 			else {//닫는괄호라면
 				stack.pop();
 				if(str.charAt(i-1)=='(')//바로앞지점이 여는괄호라면 레이저지점
-					answer += stack.size();
+					answer += stack.size();			
 				else answer++;//막대기끝이면 꺼내기
 			}
 		}		
