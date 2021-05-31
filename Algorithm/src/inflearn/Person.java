@@ -7,7 +7,7 @@ import java.util.Stack;
 public class Person {
 	int id;
 	int priority;
-	public Person(int id, int priority) {
+	public Person(int id, int priority) {//클래스형으로넣는다
 		this.id = id;
 		this.priority = priority;
 	}
@@ -24,7 +24,7 @@ class June1{
 			Person tmp = Q.poll();
 			for(Person x:Q) {
 				if(x.priority>tmp.priority) {
-					Q.offer(tmp);
+					Q.offer(tmp);//다시넣는다
 					tmp = null;
 					break;
 				}
