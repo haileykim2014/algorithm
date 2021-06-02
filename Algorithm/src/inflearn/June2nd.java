@@ -6,15 +6,15 @@ import java.util.Stack;
 
 public class June2nd {	
 	public int[] solution(int n, int[] arr){
-		for(int i=0; i<n-1; i++){
-			for(int j=0; j<n-i-1; j++){
-				if(arr[j]>arr[j+1]){
-					int tmp=arr[j];
-					arr[j]=arr[j+1];
-					arr[j+1]=tmp;
-				}
-			}	
-		}
+		for(int i=1; i<n; i++){ //1번인덱스부터
+			int tmp = arr[i],j;
+			for(j=i-1;j>=0;j--) { //앞인덱스로간다
+				if(arr[j]>tmp) //크면 뒤로민다.
+					arr[j+1]=arr[j];
+				else break;//멈추기 for문빠져나간다
+			}
+		arr[j+1] =tmp;//멈춘자리 뒤에서 템프에넣는다
+	}
 		return arr;
 	}
 	public static void main(String[] args){
