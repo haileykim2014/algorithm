@@ -13,7 +13,7 @@ public class June2nd {
 					arr[j+1]=arr[j];
 				else break;//멈추기 for문빠져나간다
 			}
-		arr[j+1] =tmp;//멈춘자리 뒤에서 템프에넣는다
+		arr[j+1] =tmp;//멈춘자리 뒤에서 템프에넣는다, -1에서멈췄으니까 다음은 0
 	}
 		return arr;
 	}
