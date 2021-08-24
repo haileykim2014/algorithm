@@ -35,6 +35,13 @@ public class Aug24 {
 
 			if(input.equals("y")) {
 				System.out.println("검색을 시작합니다");
+				String name =  scan.next();
+				
+				for(Student stu : list) {
+					if(stu.getName().equals(name)){
+						System.out.println("해당하는 학생의 학번은"+stu.getNo());
+					}//문자열비교
+				}
 			}
 			else if(input.equals("n")) {
 				break;//n이면 while물 탈출
