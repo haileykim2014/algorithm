@@ -83,7 +83,7 @@ class HashTable {
 	}
 }
 
-public class Test{
+public class Aug28{
 	public static void main(String[] args) {
 		HashTable h = new HashTable(3);
 		h.put("sung", "She is pretty");
