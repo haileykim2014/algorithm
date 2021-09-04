@@ -14,3 +14,8 @@
 
 20210831
 [Bubble Sort](Algorithm/src/inflearn/BubbleSort.java)
+
+20210905
+[Insertion Sort](Algorithm/src/inflearn/InsertionSort.java)
+
+
