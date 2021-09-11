@@ -1,5 +1,7 @@
 package problemSolving;
 
+import java.util.Arrays;
+
 public class 제일작은수제거 {
 	public int[] solution(int[] arr) {
 		if(arr.length==1) {
@@ -29,8 +31,7 @@ public class 제일작은수제거 {
 		int[] arr = {4,3,2,1};
 		arr = t.solution(arr);
 		
-		for(int num:arr)
-		System.out.println(num+" ");
+		System.out.println(Arrays.toString(arr));
 	}
 
 }
