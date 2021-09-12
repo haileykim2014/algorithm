@@ -4,7 +4,7 @@ public class BubbleSort {
 
 	public static int[] bubbleSort(int[] arr) {
 		
-		int temp = 0; //ÀÓ½Ãº¸°ü¼Ò
+		int temp = 0; 
 		
 		for(int i=0;i<arr.length;i++) {
 			for(int j=1;j<arr.length-i;j++) {//회전을 할 수록 범위가 줄어든다
