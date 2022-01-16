@@ -1,58 +1,36 @@
 package problemSolving;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.StringTokenizer;
+import java.util.Stack;
 
-public class Boj10773 {
-	
-	public static int[] stack;
-	public static int size = 0;
-	public static void main(String args[]) throws IOException {
-
+public class Boj1874 {
+	public static void main(String[] args)throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
-		int result = 0;
-
-		int N = Integer.parseInt(br.readLine());
- 
-		stack = new int[N];//주문시 push된 값을 담을 배열
+		int n = Integer.parseInt(br.readLine()); // 수열의 갯수
+		int index = 0;//오름차순으로 push하기 위한 변수
+		Stack<Integer> stack = new Stack<Integer>();
+		StringBuilder sb = new StringBuilder(); 
 		
-		while (N-- > 0) {
-			int order = Integer.parseInt(br.readLine());
- 
-			if(order == 0) {
-				pop();
+		while(n-->0) {
+			
+			int num = Integer.parseInt(br.readLine());
+			
+			if(num>index) {//입력받은 숫자가 인덱스보다 클떄
+				for(int i=1;i<=num;i++) {
+					stack.push(i);//입력받은 숫자 넣기
+					sb.append("+").append("\n");
+				}
+				index = num; //입력받은 숫자 넣은 후 index 업데이트
+				
+			}else if(stack.peek() != num) {
+				System.out.println("NO");
+				return;
 			}
-			else {
-				push(order);
-			}
+			stack.pop(); //위에있는 값꺼내기
+			sb.append("-").append("\n");
 		}
-		for(int i : stack) {
-			result += i;
-		}
-		
-		System.out.println(result);
-	}
- 
-	public static void push(int item) {
-		stack[size] = item;
-		size++;
-	}
-	
-	public static int pop() {
-
-			int res = stack[size - 1];
-			stack[size - 1] = 0;
-			size--;
-			return res;	
-	}
-	
-	public static void all() {
-		for(int i : stack) {
-		 System.out.print(stack[i]+",");
-		}
-	}
-	
+		System.out.println(sb);
+		}    
 }
