@@ -10,7 +10,7 @@ class 부분집합 {
 			for(int i=1; i<=n; i++){
 				if(ch[i]==1) tmp+=(i+" ");
 			}
-			if(tmp.length()>0) System.out.println(tmp);
+			if(tmp.length()>0) System.out.println(tmp); //공집합제외
 		}
 		else{
 			ch[L]=1;
