@@ -18,8 +18,8 @@ public class DFSBadugi {
 	public static void main(String[] args) {
 		DFSBadugi t = new DFSBadugi();
 		Scanner scan = new Scanner(System.in);
-		n = scan.nextInt();//5
-		max = scan.nextInt();//20
+		n = scan.nextInt();//5 원소 개수
+		max = scan.nextInt();//20 최대 시간
 		int[] score = new int[n];
 		int[] time = new int[n];
 		for(int i=0;i<n;i++) {
