@@ -24,5 +24,20 @@ class Permutation {
 		m=kb.nextInt(); //¿Œµ¶Ω∫
 		pm=new int[m];
 		T.DFS(0);
+		
+		String s = "";
+		String newStr = "";
+		StringBuilder str = new StringBuilder();
+		for(int i = 0 ;i <= s.length();i++) {
+			if(i==0) {
+				newStr+=s.toUpperCase();
+			}
+			else if(i%2==0) {
+				newStr+=s.toUpperCase();
+			}
+			else {
+				newStr+=s.toLowerCase();
+			}
+		}
 	}
 }
