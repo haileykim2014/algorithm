@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class FindPermutation {
 	static int[] pm, ch, arr;
-	static int n, m;
+	static int n, m; //자연수 갯수 , 뽑아야할 갯수
 	public void DFS(int L){
 		if(L==m){ //뽑아내야할 단계를 다 돌은 경우
 			for(int x : pm) System.out.print(x+" "); //순열에 담긴 숫자 하나씩 출력
