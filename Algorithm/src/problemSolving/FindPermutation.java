@@ -3,7 +3,7 @@ package problemSolving;
 import java.util.Scanner;
 
 public class FindPermutation {
-	static int[] pm, ch, arr;
+	static int[] pm, ch, arr;//ìˆ˜ì—´,ë°©ë¬¸,ì›ë³¸ë°°ì—´
 	static int n, m;
 	public void DFS(int L){
 		if(L==m){
@@ -26,11 +26,11 @@ public class FindPermutation {
 		Scanner kb = new Scanner(System.in);
 		n=kb.nextInt();
 		m=kb.nextInt();
-		arr=new int[n]; //ÁÖ¾îÁø ÀÚ¿¬¼ö ´ãÀ» ¹è¿­
+		arr=new int[n]; //ì£¼ì–´ì§„ ìì—°ìˆ˜ ë‹´ì„ ë°°ì—´
 		for(int i=0; i<n; i++) 
-			arr[i]=kb.nextInt(); //ÁÖ¾îÁø ÀÚ¿¬¼ö ³Ö±â
-		ch=new int[n]; //¹æ¹® È®ÀÎ¿ë
-		pm=new int[m]; //¼ö¿­´ãÀ» ¹è¿­
+			arr[i]=kb.nextInt(); //ì£¼ì–´ì§„ ìì—°ìˆ˜ ë„£ê¸°
+		ch=new int[n]; //ë°©ë¬¸ í™•ì¸ìš©
+		pm=new int[m]; //ìˆ˜ì—´ë‹´ì„ ë°°ì—´
 		T.DFS(0);
 	}
 }
