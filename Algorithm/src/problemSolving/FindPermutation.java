@@ -6,17 +6,17 @@ public class FindPermutation {
 	static int[] pm, ch, arr;
 	static int n, m;
 	public void DFS(int L){
-		if(L==m){
-			for(int x : pm) System.out.print(x+" ");
+		if(L==m){ //뽑아내야할 단계를 다 돌은 경우
+			for(int x : pm) System.out.print(x+" "); //순열에 담긴 숫자 하나씩 출력
 			System.out.println();
 		}
-		else{
-			for(int i=0; i<n; i++){
-				if(ch[i]==0){
-					ch[i]=1;
-					pm[L]=arr[i];
-					DFS(L+1);
-					ch[i]=0;
+		else{ //아직 다 순열을 다 뽑지않았을때
+			for(int i=0; i<n; i++){ //주어진 자연수 갯수만큼 반복
+				if(ch[i]==0){ //방문하지 않았다면 ,중복피함
+					ch[i]=1; //방문체크
+					pm[L]=arr[i]; //순열에 i번째 숫자넣기
+					DFS(L+1); //다음 레벨
+					ch[i]=0; //방문해제 -> 다음레벨 마치고 돌아왔을때 
 				}
 			}
 		}
