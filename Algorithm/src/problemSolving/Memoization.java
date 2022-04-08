@@ -13,8 +13,8 @@ class Memoization{
 	public static void main(String[] args){
 		Memoization T = new Memoization();
 		Scanner kb = new Scanner(System.in);
-		int n=kb.nextInt();
-		int r=kb.nextInt();
+		int n=kb.nextInt(); //n개중
+		int r=kb.nextInt(); //r개를 뽑는다
 		System.out.println(T.DFS(n, r));
 	}
 }
