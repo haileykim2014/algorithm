@@ -2,10 +2,10 @@ package problemSolving;
 
 import java.util.*;
 class ExpectProgression{
-	static int[] b, p, ch;
+	static int[] b, p, ch; //p : 수열담을 배열
 	static int n, f;
 	boolean flag=false;
-	int[][] dy=new int[35][35];
+	int[][] dy=new int[35][35]; 
 	public int combi(int n, int r){ //메모이제이션
 		if(dy[n][r]>0) return dy[n][r];
 		if(n==r || r==0) return 1;
