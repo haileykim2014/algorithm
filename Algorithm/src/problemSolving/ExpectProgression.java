@@ -26,7 +26,7 @@ class ExpectProgression{
 					ch[i]=1; //i를 사용했다
 					p[L]=i; //i자체를 넣기
 					DFS(L+1, sum+(p[L]*b[L]));
-					ch[i]=0;
+					ch[i]=0; //사용해제
 				}
 			}
 		}
