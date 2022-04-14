@@ -8,7 +8,7 @@ class ExpectProgression{
 	int[][] dy=new int[35][35]; 
 	public int combi(int n, int r){ //메모이제이션
 		if(dy[n][r]>0) return dy[n][r]; //미리 구한값이라면 구했던 거쓰기
-		if(n==r || r==0) return 1;
+		if(n==r || r==0) return 1;//마지막 노드라면 1을 리턴
 		else return dy[n][r]=combi(n-1, r-1)+combi(n-1, r);
 	}
 
