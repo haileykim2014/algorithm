@@ -12,20 +12,20 @@ class Point{
 public class ShortestRoute {
 	static int[] dx = {-1,0,1,0};
 	static int[] dy = {0,-1,0,1};
-	static int[][] board, dis;
+	static int[][] board, dis; //distance배열 
 	public void BFS(int x,int y) {
 		Queue<Point> q = new java.util.LinkedList();
-		q.offer(new Point(x,y));//기준점 큐에 너히
-		board[x][y]=1;
+		q.offer(new Point(x,y));//기준점 큐에 넣기
+		board[x][y]=1; //시작점 방문표시
 		while(!q.isEmpty()) {
 			Point tmp = q.poll();//큐에 넣은 기준값 빼기
 			for(int i = 0; i<4 ; i++) {
 				int nx = tmp.x + dx[i]; //뺀 기준값 x측의 상하좌우
 				int ny = tmp.y + dy[i]; //뺸 기준값 y측의 상하좌우
 				if(nx>=1 && nx <= 7 && ny>=1 && ny <=7 && board[nx][ny] ==0) {
-					board[nx][ny]=1;
-					q.offer(new Point(nx,ny));
-					dis[nx][ny] = dis[tmp.x][tmp.y]+1;
+					board[nx][ny]=1; // 시작점 방문 표시
+					q.offer(new Point(nx,ny)); //새로운 좌표 넣기
+					dis[nx][ny] = dis[tmp.x][tmp.y]+1; //거리담기
 				}
 			}
 		}
