@@ -21,7 +21,7 @@ class Tomato {
 				int nx=tmp.x+dx[i]; //기준의 동서남북 좌표 하나씩
 				int ny=tmp.y+dy[i];
 				if(nx>=0 && nx<n && ny>=0 && ny<m && board[nx][ny]==0){ //범위에맞으면
-					board[nx][ny]=1;
+					board[nx][ny]=1;//근처 익는 토마토
 					Q.offer(new Point(nx, ny));
 					dis[nx][ny]=dis[tmp.x][tmp.y]+1;
 				}
@@ -38,8 +38,9 @@ class Tomato {
 		dis=new int[n][m];
 		for(int i=0; i<n; i++){
 			for(int j=0; j<m; j++){
-				board[i][j]=kb.nextInt();
-				if(board[i][j]==1) Q.offer(new Point(i, j));
+				board[i][j]=kb.nextInt(); //여러개의 시작점에서 모든 지점으로의 거리를 구해야한다.
+				if(board[i][j]==1) //익은 토마토 위치를 큐에 넣는다 , 1인 지점의 좌표를 미리 넣는다
+					Q.offer(new Point(i, j));//거리순으로 좌표가 쌓인다
 			}
 		}
 		T.BFS();
