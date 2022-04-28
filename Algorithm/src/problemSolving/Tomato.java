@@ -54,7 +54,7 @@ class Tomato {
 		if(flag){
 			for(int i=0; i<n; i++){
 				for(int j=0; j<m; j++){
-					answer=Math.max(answer, dis[i][j]);
+					answer=Math.max(answer, dis[i][j]); //다 익은 토마토중에서 익는데 가장 오래걸린것출력
 				}
 			}
 			System.out.println(answer);
