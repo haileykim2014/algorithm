@@ -9,7 +9,7 @@ class Point{
 	}
 }
 class Tomato {
-	static int[] dx={-1, 0, 1, 0};
+	static int[] dx={-1, 0, 1, 0};//동서남북
 	static int[] dy={0, 1, 0, -1};
 	static int[][] board, dis;
 	static int n, m;
@@ -18,9 +18,9 @@ class Tomato {
 		while(!Q.isEmpty()){
 			Point tmp=Q.poll();
 			for(int i=0; i<4; i++){
-				int nx=tmp.x+dx[i];
+				int nx=tmp.x+dx[i]; //기준의 동서남북 좌표 하나씩
 				int ny=tmp.y+dy[i];
-				if(nx>=0 && nx<n && ny>=0 && ny<m && board[nx][ny]==0){
+				if(nx>=0 && nx<n && ny>=0 && ny<m && board[nx][ny]==0){ //범위에맞으면
 					board[nx][ny]=1;
 					Q.offer(new Point(nx, ny));
 					dis[nx][ny]=dis[tmp.x][tmp.y]+1;
