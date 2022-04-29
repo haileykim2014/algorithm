@@ -11,12 +11,12 @@ class Point{
 class Tomato {
 	static int[] dx={-1, 0, 1, 0};//동서남북
 	static int[] dy={0, 1, 0, -1};
-	static int[][] board, dis;
-	static int n, m;
+	static int[][] board, dis; //미로, 거리
+	static int n, m; //행,열
 	static Queue<Point> Q=new java.util.LinkedList();
 	public void BFS(){
-		while(!Q.isEmpty()){
-			Point tmp=Q.poll();
+		while(!Q.isEmpty()){ //큐가 빌때까지 반복
+			Point tmp=Q.poll();//큐에서 하나씩 꺼내기
 			for(int i=0; i<4; i++){
 				int nx=tmp.x+dx[i]; //기준의 동서남북 좌표 하나씩
 				int ny=tmp.y+dy[i];
