@@ -12,7 +12,7 @@ class IslandByBFS {
 	static int answer=0, n;
 	static int[] dx={-1, -1, 0, 1, 1, 1, 0, -1};
 	static int[] dy={0, 1, 1, 1, 0, -1, -1, -1};
-	Queue<Point> queue = new LinkedList<>();
+	Queue<Point> queue = new java.util.LinkedList<>();
 	public void BFS(int x, int y, int[][] board){
 		queue.add(new Point(x, y));
 		while(!queue.isEmpty()){
