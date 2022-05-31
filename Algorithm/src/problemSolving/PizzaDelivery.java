@@ -9,11 +9,11 @@ class Point3{
 	}
 }
 class PizzaDelivery {
-	static int n, m, len, answer=Integer.MAX_VALUE;
-	static int[] combi;
-	static ArrayList<Point3> hs, pz;
+	static int n, m, len, answer=Integer.MAX_VALUE;//도시의 피자배달거리 최소값
+	static int[] combi;//조합저장
+	static ArrayList<Point3> hs, pz;//집,피자집
 	public void DFS(int L, int s){
-		if(L==m){
+		if(L==m){//조합이 완성되면
 			int sum=0;
 			for(Point3 h : hs){
 				int dis=Integer.MAX_VALUE;
@@ -41,13 +41,13 @@ class PizzaDelivery {
 		hs=new ArrayList<>();
 		for(int i=0; i<n; i++){
 			for(int j=0; j<n; j++){
-				int tmp=kb.nextInt();
+				int tmp=kb.nextInt(); //정보를 하나씩받는다.
 				if(tmp==1) hs.add(new Point3(i, j));
 				else if(tmp==2) pz.add(new Point3(i, j));
 			}
 		}
-		len=pz.size();
-		combi=new int[m];
+		len=pz.size();//피자집의 갯수
+		combi=new int[m];//len개 중에 m개를 뽑아야한다.
 		T.DFS(0, 0);
 		System.out.println(answer);
 	}
